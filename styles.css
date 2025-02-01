@@ -13,7 +13,14 @@ body {
     font-size: 16px;
     margin-top: 0;
 }
+.timeline-item {
+    opacity: 0; /* Изначально скрыто */
+    transition: opacity 1s ease-in-out; /* Плавный переход */
+}
 
+.timeline-item.active {
+    opacity: 1; /* Показываем элемент, когда он активен */
+}
 /* Навигация */
 header {
     position: fixed;
