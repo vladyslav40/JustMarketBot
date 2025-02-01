@@ -7,11 +7,12 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #0a2a3d, #041423); /* Глянцевый градиентный фон */
-    color: #e0f7fa; /* Мягкий светло-голубой текст */
+    background-color: #0a2a3d; /* Темно-синий фон */
+    color: white;
     line-height: 1.6;
     font-size: 16px;
     margin-top: 0;
+    padding-top: 80px; /* Отступ от шапки для всех страниц */
 }
 
 /* Навигация */
@@ -20,11 +21,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px); /* Эффект стеклянного размытия */
+    background-color: rgba(0, 0, 0, 0.85);
     padding: 20px;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Лёгкая тень для глубины */
 }
 
 .nav-container {
@@ -37,9 +36,7 @@ header {
 
 h1.logo {
     font-size: 2.5rem;
-    background: linear-gradient(90deg, #00bcd4, #1e90ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Глянцевый текст */
+    color: #00bcd4; /* Акцентный голубой цвет */
 }
 
 nav ul {
@@ -52,55 +49,201 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #e0f7fa;
+    color: white;
     text-decoration: none;
     font-size: 1.3rem;
-    transition: all 0.4s ease-in-out;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #00bcd4, #1e90ff);
-    transition: width 0.4s ease-in-out;
-}
-
-nav ul li a:hover::after {
-    width: 100%; /* Подсветка при наведении */
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #1e90ff; /* Яркий синий при наведении */
+    color: #00bcd4; /* Голубой при наведении */
 }
 
 /* Главная секция */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, rgba(10, 42, 61, 0.9), rgba(4, 20, 35, 0.9)), url('https://example.com/background.jpg') no-repeat center center/cover;
+    background-image: url('https://via.placeholder.com/1500x1000');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7); /* Внутренний отблеск */
+    animation: fadeIn 2s ease-out;
 }
 
-.hero h2 {
-    font-size: 3rem;
-    background: linear-gradient(90deg, #00bcd4, #1e90ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Глянцевый заголовок */
-    margin-bottom: 20px;
+.hero-content h2 {
+    font-size: 4.5rem;
+    color: white;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
 }
 
-.hero p {
-    font-size: 1.5rem;
-    color: #b3e5fc;
-    max-width: 800px;
+.hero-content p {
+    font-size: 1.8rem;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    background-color: #00bcd4;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero .btn:hover {
+    background-color: #0097a7; /* Тёмно-голубой при наведении */
+}
+
+/* Секции */
+section {
+    padding: 80px 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.container {
+    max-width: 1200px;
     margin: 0 auto;
-} 
+    text-align: center;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    color: #00bcd4; /* Голубой цвет для заголовков */
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+/* Портфолио */
+.portfolio-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.portfolio-item {
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Формы */
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #00bcd4;
+    border-radius: 5px;
+    background-color: #1f2d3d;
+    color: white;
+    font-size: 1.2rem;
+}
+
+form button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0097a7;
+}
+
+/* Футер */
+footer {
+    background-color: #031a2a;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding-top: 100px; /* Корректировка для маленьких экранов */
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .portfolio-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    form input, form textarea {
+        font-size: 1.1rem;
+    }
+
+    form button {
+        font-size: 1.4rem;
+    }
+}
+
+/* Дополнительная адаптация для мобильных */
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+
+    form input, form textarea {
+        font-size: 1rem;
+    }
+
+    form button {
+        font-size: 1.3rem;
+    }
+}
