@@ -7,12 +7,11 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #0a2a3d; /* Темно-синий фон */
+    background-color: #004f6b; /* Темно-голубой фон */
     color: white;
     line-height: 1.6;
     font-size: 16px;
     margin-top: 0;
-    padding-top: 80px; /* Отступ от шапки для всех страниц */
 }
 
 /* Навигация */
@@ -21,8 +20,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Уменьшенная прозрачность */
+    padding: 15px;
     z-index: 1000;
 }
 
@@ -59,191 +58,55 @@ nav ul li a:hover {
     color: #00bcd4; /* Голубой при наведении */
 }
 
-/* Главная секция */
-.hero {
-    height: 100vh;
-    background-image: url('https://via.placeholder.com/1500x1000');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    animation: fadeIn 2s ease-out;
-}
-
-.hero-content h2 {
-    font-size: 4.5rem;
-    color: white;
-    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
-}
-
-.hero-content p {
-    font-size: 1.8rem;
-    margin: 20px 0;
-}
-
-.hero .btn {
-    background-color: #00bcd4;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.6rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.hero .btn:hover {
-    background-color: #0097a7; /* Тёмно-голубой при наведении */
-}
-
-/* Секции */
-section {
-    padding: 80px 20px;
-    animation: fadeIn 2s ease-out;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h2 {
-    font-size: 3.5rem;
-    margin-bottom: 40px;
-    color: #00bcd4; /* Голубой цвет для заголовков */
-}
-
-p {
-    font-size: 1.3rem;
-    line-height: 1.8;
-}
-
-/* Портфолио */
-.portfolio-items {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-}
-
-.portfolio-item {
-    width: 30%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05);
-}
-
-.portfolio-item img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Формы */
-form input, form textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #00bcd4;
-    border-radius: 5px;
-    background-color: #1f2d3d;
-    color: white;
-    font-size: 1.2rem;
-}
-
-form button {
-    background-color: #00bcd4;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #0097a7;
-}
-
-/* Футер */
-footer {
-    background-color: #031a2a;
-    padding: 20px;
-    text-align: center;
-}
-
-footer p {
-    font-size: 1.2rem;
-}
-
-/* Анимации */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* Мобильная адаптация */
+/* Мобильная версия */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        padding-top: 100px; /* Корректировка для маленьких экранов */
-    }
-
-    .hero-content h2 {
-        font-size: 3rem;
-    }
-
-    .hero-content p {
-        font-size: 1.5rem;
-    }
-
     nav ul {
+        display: none; /* Скрыть навигацию на мобильных устройствах */
         flex-direction: column;
-        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+        width: 200px;
+        padding: 20px;
     }
 
     nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
-    .portfolio-items {
-        flex-direction: column;
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    nav ul.active {
+        display: flex; /* Показать меню при активной клацке */
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-    }
-
-    .portfolio-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    form input, form textarea {
-        font-size: 1.1rem;
-    }
-
-    form button {
-        font-size: 1.4rem;
+        width: 100%;
     }
 }
 
-/* Дополнительная адаптация для мобильных */
-@media (max-width: 480px) {
-    .hero-content h2 {
-        font-size: 2.5rem;
-    }
+/* Кнопка меню */
+.menu-btn {
+    display: none;
+}
 
-    .hero-content p {
-        font-size: 1.3rem;
-    }
-
-    form input, form textarea {
-        font-size: 1rem;
-    }
-
-    form button {
-        font-size: 1.3rem;
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        cursor: pointer;
     }
 }
