@@ -3,52 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BotForge - Створення Telegram Ботів</title>
+    <title>Створення Telegram Ботів</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
+    <!-- Навигационная панель -->
     <header>
         <div class="nav-container">
             <h1 class="logo">BotForge</h1>
             <nav>
                 <ul>
                     <li><a href="#home">Головна</a></li>
-                    <li><a href="#skills">Наші Навички</a></li>
+                    <li><a href="#about">Про нас</a></li>
                     <li><a href="#services">Послуги</a></li>
+                    <li><a href="#portfolio">Портфоліо</a></li>
                     <li><a href="#contact">Контакти</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Головна секція -->
     <section id="home" class="hero">
-        <h2>Майстри створення Telegram Ботів</h2>
-        <p>Ми створюємо інноваційні Telegram-боти для будь-яких потреб.</p>
+        <div class="hero-content">
+            <h2>Майбутнє чат-ботів вже тут</h2>
+            <p>Наша команда створює Telegram боти, які змінюють ваш бізнес!</p>
+            <a href="#services" class="btn">Дізнатися більше</a>
+        </div>
     </section>
 
-    <!-- Карта Навичок -->
-    <section id="skills" class="skills-timeline">
-        <h2>Наші Навички</h2>
-        <div class="timeline">
-            <div class="timeline-item" data-step="1">
-                <h3>1. Аналіз потреб клієнта</h3>
-                <p>Ми детально вивчаємо ваші вимоги для створення ідеального бота.</p>
-            </div>
-            <div class="timeline-item" data-step="2">
-                <h3>2. Розробка Telegram Ботів</h3>
-                <p>Використовуємо сучасні технології для розробки функціональних рішень.</p>
-            </div>
-            <div class="timeline-item" data-step="3">
-                <h3>3. Тестування та підтримка</h3>
-                <p>Проводимо тестування і надаємо технічну підтримку для безперебійної роботи.</p>
+    <!-- Про нас -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Про нас</h2>
+            <p>Ми створюємо боти, що дозволяють компаніям автоматизувати бізнес-процеси та взаємодіяти з клієнтами найефективнішим способом. Наші рішення включають чат-ботів для підтримки, продажу та інших сфер бізнесу.</p>
+            <p>Наша команда — це професіонали з багаторічним досвідом у розробці ботів, що працюють стабільно і безперебійно.</p>
+        </div>
+    </section>
+
+    <!-- Наші послуги -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Наші Послуги</h2>
+            <div class="service-boxes">
+                <div class="service">
+                    <h3>Розробка ботів</h3>
+                    <p>Ми створюємо ботів, які автоматизують завдання, знижують витрати часу та грошей для вашого бізнесу. Ми працюємо з Telegram API та інтеграціями для забезпечення стабільної роботи.</p>
+                </div>
+                <div class="service">
+                    <h3>Інтеграція з системами</h3>
+                    <p>Інтегруємо наших ботів з CRM, ERP, системами платежів та іншими платформами для автоматизації процесів.</p>
+                </div>
+                <div class="service">
+                    <h3>Аналітика та підтримка</h3>
+                    <p>Ми надаємо підтримку та аналітику роботи ваших ботів для постійного удосконалення функціоналу та результативності.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Портфоліо -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Наші роботи</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/500x300" alt="Проект 1">
+                    <h4>Проект 1</h4>
+                    <p>Автоматизація продажів через Telegram бота для інтернет-магазину. Інтеграція з платіжними системами.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/500x300" alt="Проект 2">
+                    <h4>Проект 2</h4>
+                    <p>Чат-бот для підтримки клієнтів у фінансовій сфері, інтегрований з CRM та системою онлайн-консультацій.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/500x300" alt="Проект 3">
+                    <h4>Проект 3</h4>
+                    <p>Розробка бота для ресторану з можливістю автоматизації замовлень та оплати через Telegram.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Контакти</h2>
+            <form>
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="email" placeholder="Ваш email" required>
+                <textarea placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit" class="btn">Відправити</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Футер -->
     <footer>
-        <p>© 2025 BotForge. Всі права захищені.</p>
+        <div class="container">
+            <p>&copy; 2025 BotForge. Всі права захищені.</p>
+        </div>
     </footer>
 
 </body>
